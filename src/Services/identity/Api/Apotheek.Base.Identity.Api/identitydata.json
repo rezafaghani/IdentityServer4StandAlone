@@ -1,0 +1,70 @@
+﻿{
+  "IdentityData": {
+    "Roles": [
+      {
+        "Name": "SystemAdministrator"
+      },
+      {
+        "Name": "Pharmacist"
+      },
+      {
+        "Name": "PharmacistAssistant"
+      }
+      ,
+      {
+        "Name": "Collaborator"
+      },
+      {
+        "Name": "Administrator"
+      },
+      {
+        "Name": "Planner"
+      },
+      {
+        "Name": "Courier"
+      },
+      {
+        "Name": "BasicUser"
+      }
+    ],
+    "Users": [
+      {
+        "Username": "admin",
+        "Password": "Pa$$word123",
+        "Email": "admin@aApotheek.com",
+        "Roles": [
+          "SystemAdministrator",
+          "Pharmacist",
+          "PharmacistAssistant",
+          "Collaborator",
+          "Administrator",
+          "Planner",
+          "Courier",
+          "BasicUser"
+        ],
+        "Claims": [
+          {
+            "Type": "name",
+            "Value": "admin"
+          },
+          {
+            "Type": "pharmacyId",
+            "Value": "1"
+          },
+          {
+            "Type": "customerId",
+            "Value": "1"
+          },
+          {
+            "Type": "cluster",
+            "Value": "1"
+          }
+        ],
+        "PinCode": "4858",
+        "CustomerId": "1",
+        "PharmacyId": "1" 
+
+      }
+    ]
+  }
+}

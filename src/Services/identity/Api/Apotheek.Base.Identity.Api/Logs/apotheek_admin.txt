@@ -1,0 +1,70 @@
+2020-05-21 00:26:23.000 +04:30 [Fatal] Host terminated unexpectedly
+System.InvalidOperationException: Could not find 'UserSecretsIdAttribute' on assembly 'Apotheek.Base.Identity.Api'.
+Check that the project for 'Apotheek.Base.Identity.Api' has set the 'UserSecretsId' build property.
+If the 'UserSecretsId' property is already set then add a reference to the Microsoft.Extensions.Configuration.UserSecrets package.
+   at Microsoft.Extensions.Configuration.UserSecretsConfigurationExtensions.AddUserSecrets(IConfigurationBuilder configuration, Assembly assembly, Boolean optional, Boolean reloadOnChange)
+   at Microsoft.Extensions.Configuration.UserSecretsConfigurationExtensions.AddUserSecrets[T](IConfigurationBuilder configuration)
+   at Apotheek.Base.Identity.Api.Program.<>c__DisplayClass4_0.<CreateHostBuilder>b__0(HostBuilderContext hostContext, IConfigurationBuilder configApp) in D:\Source\Lab\IdentityServer\src\Services\Identity\Api\Apotheek.Base.Identity.Api\Program.cs:line 55
+   at Microsoft.Extensions.Hosting.HostBuilder.BuildAppConfiguration()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Apotheek.Base.Identity.Api.Program.Main(String[] args) in D:\Source\Lab\IdentityServer\src\Services\Identity\Api\Apotheek.Base.Identity.Api\Program.cs:line 29
+2020-05-21 00:29:30.617 +04:30 [Fatal] Host terminated unexpectedly
+System.InvalidOperationException: Could not find 'UserSecretsIdAttribute' on assembly 'Apotheek.Base.Identity.Api'.
+Check that the project for 'Apotheek.Base.Identity.Api' has set the 'UserSecretsId' build property.
+If the 'UserSecretsId' property is already set then add a reference to the Microsoft.Extensions.Configuration.UserSecrets package.
+   at Microsoft.Extensions.Configuration.UserSecretsConfigurationExtensions.AddUserSecrets(IConfigurationBuilder configuration, Assembly assembly, Boolean optional, Boolean reloadOnChange)
+   at Microsoft.Extensions.Configuration.UserSecretsConfigurationExtensions.AddUserSecrets[T](IConfigurationBuilder configuration)
+   at Apotheek.Base.Identity.Api.Program.<>c__DisplayClass4_0.<CreateHostBuilder>b__0(HostBuilderContext hostContext, IConfigurationBuilder configApp) in D:\Source\Lab\IdentityServer\src\Services\Identity\Api\Apotheek.Base.Identity.Api\Program.cs:line 55
+   at Microsoft.Extensions.Hosting.HostBuilder.BuildAppConfiguration()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Apotheek.Base.Identity.Api.Program.Main(String[] args) in D:\Source\Lab\IdentityServer\src\Services\Identity\Api\Apotheek.Base.Identity.Api\Program.cs:line 29
+2020-05-21 00:40:54.430 +04:30 [Fatal] Host terminated unexpectedly
+System.InvalidOperationException: Could not find 'UserSecretsIdAttribute' on assembly 'Apotheek.Base.Identity.Api'.
+Check that the project for 'Apotheek.Base.Identity.Api' has set the 'UserSecretsId' build property.
+If the 'UserSecretsId' property is already set then add a reference to the Microsoft.Extensions.Configuration.UserSecrets package.
+   at Microsoft.Extensions.Configuration.UserSecretsConfigurationExtensions.AddUserSecrets(IConfigurationBuilder configuration, Assembly assembly, Boolean optional, Boolean reloadOnChange)
+   at Microsoft.Extensions.Configuration.UserSecretsConfigurationExtensions.AddUserSecrets[T](IConfigurationBuilder configuration)
+   at Apotheek.Base.Identity.Api.Program.<>c__DisplayClass4_0.<CreateHostBuilder>b__0(HostBuilderContext hostContext, IConfigurationBuilder configApp) in D:\Source\Lab\IdentityServer\src\Services\Identity\Api\Apotheek.Base.Identity.Api\Program.cs:line 55
+   at Microsoft.Extensions.Hosting.HostBuilder.BuildAppConfiguration()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Apotheek.Base.Identity.Api.Program.Main(String[] args) in D:\Source\Lab\IdentityServer\src\Services\Identity\Api\Apotheek.Base.Identity.Api\Program.cs:line 29
+2020-05-21 00:41:12.438 +04:30 [Fatal] Host terminated unexpectedly
+System.InvalidOperationException: Could not find 'UserSecretsIdAttribute' on assembly 'Apotheek.Base.Identity.Api'.
+Check that the project for 'Apotheek.Base.Identity.Api' has set the 'UserSecretsId' build property.
+If the 'UserSecretsId' property is already set then add a reference to the Microsoft.Extensions.Configuration.UserSecrets package.
+   at Microsoft.Extensions.Configuration.UserSecretsConfigurationExtensions.AddUserSecrets(IConfigurationBuilder configuration, Assembly assembly, Boolean optional, Boolean reloadOnChange)
+   at Microsoft.Extensions.Configuration.UserSecretsConfigurationExtensions.AddUserSecrets[T](IConfigurationBuilder configuration)
+   at Apotheek.Base.Identity.Api.Program.<>c__DisplayClass4_0.<CreateHostBuilder>b__0(HostBuilderContext hostContext, IConfigurationBuilder configApp) in D:\Source\Lab\IdentityServer\src\Services\Identity\Api\Apotheek.Base.Identity.Api\Program.cs:line 55
+   at Microsoft.Extensions.Hosting.HostBuilder.BuildAppConfiguration()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Apotheek.Base.Identity.Api.Program.Main(String[] args) in D:\Source\Lab\IdentityServer\src\Services\Identity\Api\Apotheek.Base.Identity.Api\Program.cs:line 29
+2020-05-21 00:50:11.236 +04:30 [Fatal] Host terminated unexpectedly
+System.ArgumentNullException: Value cannot be null. (Parameter 'implementationInstance')
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton[TService](IServiceCollection services, TService implementationInstance)
+   at Apotheek.Base.Identity.Api.Startup.ConfigureServices(IServiceCollection services) in D:\Source\Lab\IdentityServer\src\Services\Identity\Api\Apotheek.Base.Identity.Api\Startup.cs:line 37
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.InvokeCore(Object instance, IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.<>c__DisplayClass9_0.<Invoke>g__Startup|0(IServiceCollection serviceCollection)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.Invoke(Object instance, IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.<>c__DisplayClass8_0.<Build>b__0(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.UseStartup(Type startupType, HostBuilderContext context, IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass12_0.<UseStartup>b__0(HostBuilderContext context, IServiceCollection services)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Apotheek.Base.Identity.Api.Program.Main(String[] args) in D:\Source\Lab\IdentityServer\src\Services\Identity\Api\Apotheek.Base.Identity.Api\Program.cs:line 29
+2020-05-26 15:16:22.309 +04:30 [Fatal] Host terminated unexpectedly
+System.TypeLoadException: GenericArguments[2], 'TUser', on 'Apotheek.Base.EntityFramework.Identity.Repositories.Interfaces.IIdentityRepository`10[TUserKey,TRoleKey,TUser,TRole,TKey,TUserClaim,TUserRole,TUserLogin,TRoleClaim,TUserToken]' violates the constraint of type parameter 'TUser'.
+   at Microsoft.Extensions.DependencyInjection.AdminServicesExtensions.AddAdminAspNetIdentityServices[TIdentityDbContext,TPersistedGrantDbContext,TUserDto,TUserDtoKey,TRoleDto,TRoleDtoKey,TUserKey,TRoleKey,TUser,TRole,TKey,TUserClaim,TUserRole,TUserLogin,TRoleClaim,TUserToken,TUsersDto,TRolesDto,TUserRolesDto,TUserClaimsDto,TUserProviderDto,TUserProvidersDto,TUserChangePasswordDto,TRoleClaimsDto,TUserClaimDto,TRoleClaimDto](IServiceCollection services, HashSet`1 profileTypes)
+   at Apotheek.Base.Identity.Api.Startup.ConfigureServices(IServiceCollection services) in D:\Source\Lab\apotheek.base\src\Services\Identity\Api\Apotheek.Base.Identity.Api\Startup.cs:line 62
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.InvokeCore(Object instance, IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.<>c__DisplayClass9_0.<Invoke>g__Startup|0(IServiceCollection serviceCollection)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.Invoke(Object instance, IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.<>c__DisplayClass8_0.<Build>b__0(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.UseStartup(Type startupType, HostBuilderContext context, IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass12_0.<UseStartup>b__0(HostBuilderContext context, IServiceCollection services)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Apotheek.Base.Identity.Api.Program.Main(String[] args) in D:\Source\Lab\apotheek.base\src\Services\Identity\Api\Apotheek.Base.Identity.Api\Program.cs:line 29

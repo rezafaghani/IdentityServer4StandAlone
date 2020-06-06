@@ -1,0 +1,142 @@
+﻿{
+  "IdentityServerData": {
+    "IdentityResources": [
+      {
+        "Name": "roles",
+        "Enabled": true,
+        "DisplayName": "Roles",
+        "UserClaims": [
+          "role"
+        ]
+      },
+      {
+        "Name": "openid",
+        "Enabled": true,
+        "Required": true,
+        "DisplayName": "Your user identifier",
+        "UserClaims": [
+          "sub"
+        ]
+      },
+      {
+        "Name": "profile",
+        "Enabled": true,
+        "DisplayName": "User profile",
+        "Description": "Your user profile information (first name, last name, etc.)",
+        "Emphasize": true,
+        "UserClaims": [
+          "name",
+          "family_name",
+          "given_name",
+          "middle_name",
+          "nickname",
+          "preferred_username",
+          "profile",
+          "picture",
+          "website",
+          "gender",
+          "birthdate",
+          "zoneinfo",
+          "locale",
+          "updated_at",
+          "permission"
+
+        ]
+      },
+      {
+        "Name": "email",
+        "Enabled": true,
+        "DisplayName": "Your email address",
+        "Emphasize": true,
+        "UserClaims": [
+          "email",
+          "email_verified"
+        ]
+      },
+      {
+        "Name": "address",
+        "Enabled": true,
+        "DisplayName": "Your address",
+        "Emphasize": true,
+        "UserClaims": [
+          "address"
+        ]
+      },
+      {
+        "Name": "pharmacy",
+        "Enabled": true,
+        "DisplayName": "pharmacy Id",
+        "Emphasize": true,
+        "UserClaims": [
+          "pharmacyId"
+        ]
+      },
+      {
+        "Name": "customer",
+        "Enabled": true,
+        "DisplayName": "customer Id",
+        "Emphasize": true,
+        "UserClaims": [
+          "customerId"
+        ]
+      },
+      {
+        "Name": "cluster",
+        "Enabled": true,
+        "DisplayName": "cluster",
+        "Emphasize": true,
+        "UserClaims": [
+          "cluster"
+        ]
+      }
+    ],
+    "ApiResources": [
+      {
+        "Name": "identity_admin_api",
+        "Scopes": [
+          {
+            "Name": "identity_admin_api",
+            "DisplayName": "identity_admin_api",
+            "Required": true,
+            "UserClaims": [
+              "role",
+              "permission",
+              "pharmacyId",
+              "customerId",
+              "cluster",
+              "openid",
+              "profile",
+              "email"
+            ]
+          }
+        ]
+      }
+    ],
+    "Clients": [
+
+      {
+        "ClientId": "identity_admin_api",
+        "ClientName": "identity_admin_api",
+        "AllowedGrantTypes": [
+          "password"
+        ],
+        "RedirectUris": [
+          "https://identitynf.bluebitsoft.com/swagger/oauth2-redirect.html"
+        ],
+        "AllowedCorsOrigins": [
+          "https://identitynf.bluebitsoft.com",
+          "https://gatewaynf.bluebitsoft.com"
+        ],
+        "RequireConsent": false,
+        "RequireClientSecret": false,
+        "AlwaysIncludeUserClaimsInIdToken": true,
+        "AllowedScopes": [
+          "identity_admin_api"
+        ],
+        "AllowOfflineAccess": true,
+        "AllowAccessTokensViaBrowser": true
+
+      }
+    ]
+  }
+}

@@ -1,0 +1,2531 @@
+{
+  "ReRoutes": [
+    //-------------------------APL-START-----------------------------
+    //adviceSystem
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/advice-systems/ranges",
+      "UpstreamHttpMethod": [
+        "Get",
+        "Post",
+        "Put"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AdviceSystem/ranges",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/advice-systems/ranges/{rangeId}",
+      "UpstreamHttpMethod": [
+        "Delete"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AdviceSystem/range/{rangeId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/advice-systems/rangeInfos?{everything}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AdviceSystem/rangeInfo?{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/advice-systems/bulk-range",
+      "UpstreamHttpMethod": [
+        "Put"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AdviceSystem/bulkRange",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    //cabinet
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/stock",
+      "UpstreamHttpMethod": [
+        "Post",
+        "Put"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/stock",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/stock/ranges",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/stock/ranges",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/stock/ranges?type={type}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/stock/ranges?type={type}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/stock/ranges/{rangeId}/locations/busy-checking",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/stock/ranges/{rangeId}/locations/busyChecking",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/stock/ranges/{rangeId}",
+      "UpstreamHttpMethod": [
+        "Delete"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/stock/ranges/{rangeId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/distribution",
+      "UpstreamHttpMethod": [
+        "Post",
+        "Get",
+        "Put"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/distribution",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/distribution/ranges",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/distribution/ranges",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/distribution/{cabinetId}/ranges",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/distribution/{cabinetId}/ranges",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/{cabinetId}/distribution",
+      "UpstreamHttpMethod": [
+        "Delete"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/{cabinetId}/distribution",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/distribution/ranges/{rangeId}/locations/busy-checking",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/distribution/ranges/{rangeId}/locations/busyChecking",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/distribution/ranges/{rangeId}",
+      "UpstreamHttpMethod": [
+        "Delete"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/distribution/ranges/{rangeId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/pickup",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/pickup",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/types",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/types",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/stock/locations/sizes",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/stock/locations/sizes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/distribution/locations/sizes",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/distribution/locations/sizes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/distribution/locations/types",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/distribution/locations/types",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/stock/locations/sizes-by-type",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/stock/locations/sizesByType",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/distribution/locations/sizes-by-type",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/distribution/locations/sizesByType",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/stock/locations/sizes",
+      "UpstreamHttpMethod": [
+        "Put"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/stock/locations/sizes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/distribution/locations/sizes",
+      "UpstreamHttpMethod": [
+        "Put"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CabinetManagement/distribution/locations/sizes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    //dashboard
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/dashboard/report?date={date}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Dashboard/report?date={date}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    //endControl
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/endControl/scan/recipes/{recipeNumber}/items?EAN={EAN}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/EndControl/scan/recipe/{recipeNumber}/item?EAN={EAN}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/endControl/scan/recipes/{recipeNumber}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/EndControl/scan/recipe/{recipeNumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    //inventory
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/stocks/articles",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/stocks/articles",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/stocks/articles/check-existing?zinumber={zinumber}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/stocks/articles/checkExisting?zinumber={zinumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/stocks/articles/odata",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/stocks/articles/OData",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/stocks/articles-by-zinumber/{zinumber}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/stocks/articlesByZinumber/{zinumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/stocks/available-locations",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/stocks/availableLocations",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/stocks/locations/{locationId}/expiration-dates",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/stocks/locations/{locationId}/expirationDates",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/stocks/locations/{locationId}/latest-expiration-date",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/stocks/locations/{locationId}/latestExpirationDate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/stocks/total-count-and-value",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/stocks/totalCountAndValue",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/stocks/{stockId}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/stocks/{stockId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/stocks-by-zinumber/{zinumber}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/stockByZiNumber/{zinumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/stocks-by-location-number/{locationNumber}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/stockByLocationNumber/{locationNumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/stocks/articles/search?articlename={articleName}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/stocks/articles/search?articlename={articleName}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/stocks/articles",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/stocks/articles",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/alternative-barcodes",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/alternativeBarcodes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/stocks/upload",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/stock/upload",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/stocks/{stockId}",
+      "UpstreamHttpMethod": [
+        "Delete"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/stocks/{stockId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/alternative-barcodes/{alternativeBarcodeId}",
+      "UpstreamHttpMethod": [
+        "Delete"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/alternativeBarcodes/{alternativeBarcodeId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/alternative-barcodes",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/alternativeBarcodes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/alternative-barcode?zinumber={zinumber}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/alternativeBarcode?zinumber={zinumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/stocks/locations/expiration-dates",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/stocks/locations/expirationDates",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/stocks/locations/expiration-dates/{expirationId}",
+      "UpstreamHttpMethod": [
+        "Delete"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/stocks/locatiosn/expirationDates/{expirationId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/article-size-agreements",
+      "UpstreamHttpMethod": [
+        "Get",
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/articleSizeAgreements",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/article-size-agreements/{sizeAgreementId}",
+      "UpstreamHttpMethod": [
+        "Delete"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/articleSizeAgreements/{sizeAgreementId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/inventory/article-size-agreements/{sizeAgreementId}?newsize={newsize}",
+      "UpstreamHttpMethod": [
+        "Put"
+      ],
+      "DownstreamPathTemplate": "/api/v1/InventoryManagement/articleSizeAgreements/{sizeAgreementId}?newsize={newsize}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    //order
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/orders?{everything}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/OrdersDataManagement/orders?{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/orders-by-zinumber/{ziNumber}?{everything}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/OrdersDataManagement/ordersByZiNumber/{ziNumber}?{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/orders/{orderId}/items?isForStock={isForStock}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/OrdersDataManagement/orders/{orderId}/items?isForStock={isForStock}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/orders/items/package-slip-quantities",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/v1/OrdersDataManagement/orders/items/packageSlipQuantities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/orders/items/quantities",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/v1/OrdersDataManagement/orders/items/quantities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/suppliers",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/OrdersDataManagement/suppliers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/orders/items/{orderItemId}",
+      "UpstreamHttpMethod": [
+        "Delete"
+      ],
+      "DownstreamPathTemplate": "/api/v1/OrdersDataManagement/orders/items/{orderItemId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/orders/id?zinumber={zinumber}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/OrdersDataManagement/orders/id?zinumber={zinumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/orders/initialize",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/v1/OrdersDataManagement/orders/initialize",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/orders/{orderId}/finish",
+      "UpstreamHttpMethod": [
+        "Put"
+      ],
+      "DownstreamPathTemplate": "/api/v1/OrdersDataManagement/orders/{orderId}/finish",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    //patientData
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/patients-by-zinumber/{zinumber}?datedFrom={datedFrom}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/PatientData/patientsByZiNumber/{zinumber}?datedFrom={datedFrom}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/patients/{clientId}/recipes",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/PatientData/{clientId}/recipes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    //PickListManagement
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/picklist/preprocessing-items",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/PickListManagement/picklist/preprocessingItems",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/picklist/generate",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/v1/PickListManagement/picklist/generate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/picklist/{pickListId}/items",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/PickListManagement/picklist/{pickListId}/items",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/picklists?{everything}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/PickListManagement/picklists?{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/picklists/{picklistId}/fill",
+      "UpstreamHttpMethod": [
+        "Put"
+      ],
+      "DownstreamPathTemplate": "/api/v1/PickListManagement/picklists/{picklistId}/fill",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    //RecipePlanner
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/distribution-rules",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/RecipePlanner/distributionRules",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/recipe/types",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/RecipePlanner/recipe/types",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/patients?{everything}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/RecipePlanner/patients?{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/patients/{clientId}/recipes/items?{everything}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/RecipePlanner/patients/{clientId}/recipes/items?{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/planner/cabinets/pickup",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/RecipePlanner/cabinets/pickup",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/delivery",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/RecipePlanner/cabinets/delivery",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/proactive",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/RecipePlanner/cabinets/proactive",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/uitdeelpost?distributionRuleId={distributionRuleId}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/RecipePlanner/cabinets/uitdeelpost?distributionRuleId={distributionRuleId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/availables",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/RecipePlanner/cabinets/availables",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/cabinets/distribution-types",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/v1/RecipePlanner/cabinets/distribution-types",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/recipes",
+      "UpstreamHttpMethod": [
+        "Put"
+      ],
+      "DownstreamPathTemplate": "/api/v1/RecipePlanner/recipes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    //SmartFiller
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/fill?{everything}",
+      "UpstreamHttpMethod": [
+        "Put"
+      ],
+      "DownstreamPathTemplate": "/api/v1/SmartFiller/fill?{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/idfs-and-picklists",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/SmartFiller/idfsAndPicklists",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    //SmartSetting
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/settings/filling",
+      "UpstreamHttpMethod": [
+        "Get",
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/v1/SmartSetting/filling",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/settings/frequent",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/SmartSetting/frequent",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/settings/nmvs-certificate",
+      "UpstreamHttpMethod": [
+        "Get",
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/v1/SmartSetting/nmvsCertificate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/settings/order/main",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/SmartSetting/order/main",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/settings/order",
+      "UpstreamHttpMethod": [
+        "Get",
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/v1/SmartSetting/order",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/settings/order/idfs",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/v1/SmartSetting/order/idfs",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/settings/order/idfs/{idfId}",
+      "UpstreamHttpMethod": [
+        "Delete"
+      ],
+      "DownstreamPathTemplate": "/api/v1/SmartSetting/order/idfs/{idfId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/settings/order/suppliers",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/SmartSetting/order/suppliers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    //StatusView
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/recipes/status",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/StatusView/recipes/status",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/recipes/status/odata",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/StatusView/recipes/status/odata",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/recipes/{recipeId}/items",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/StatusView/recipes/{recipeId}/items",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/recipes/location/{locationId}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/StatusView/recipes/location/{locationId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/recipes/location",
+      "UpstreamHttpMethod": [
+        "Put"
+      ],
+      "DownstreamPathTemplate": "/api/v1/StatusView/recipes/location",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/recipes/items/{recipeItemId}/comments",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/StatusView/recipes/items/{recipeItemId}/comments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/recipes/search?eanOrName={eanOrName}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/StatusView/recipes/search?eanOrName={eanOrName}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/recipes/{recipeId}/end?locationId={locationId}",
+      "UpstreamHttpMethod": [
+        "Put"
+      ],
+      "DownstreamPathTemplate": "/api/v1/StatusView/recipes/{recipeId}/end?locationId={locationId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/recipes/{recipeId}/items-before-delete?locationId={locationId}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/StatusView/recipes/{recipeId}/items-before-delete?locationId={locationId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/recipes/status/synced",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/StatusView/recipes/status/synced",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/recipes/bulk",
+      "UpstreamHttpMethod": [
+        "Delete"
+      ],
+      "DownstreamPathTemplate": "/api/v1/StatusView/recipes/bulk",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/recipes/fill",
+      "UpstreamHttpMethod": [
+        "Put"
+      ],
+      "DownstreamPathTemplate": "/api/v1/StatusView/recipes/fill",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/recipes/{recipeId}/fmd/signin",
+      "UpstreamHttpMethod": [
+        "Put"
+      ],
+      "DownstreamPathTemplate": "/api/v1/StatusView/recipes/{recipeId}/fmd/signin",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/recipes/{recipeId}/fmd/recheck?qrcode={qrcode}",
+      "UpstreamHttpMethod": [
+        "Put"
+      ],
+      "DownstreamPathTemplate": "/api/v1/StatusView/recipes/{recipeId}/fmd/recheck?qrcode={qrcode}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    //TrackAndTrace
+    {
+      "UpstreamPathTemplate": "/api/v1/apl/track-and-trace/recipe-info",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/v1/TrackAndTrace/recipe-info",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    //JSPM
+    {
+      "UpstreamPathTemplate": "/jspm",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/jspm",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ]
+    },
+    //-------------------------APL-END-------------------------------
+    //-------------------------SMARTTRACK-START-------------------------
+    //CGM
+    {
+      "UpstreamPathTemplate": "/api/v1/smart-track/cgm/parse",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CGM/parse",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3009
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/smart-track/cgm/url",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CGM/url",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3009
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/smart-track/cgm/settings",
+      "UpstreamHttpMethod": [
+        "Get",
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CGM/settings",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3009
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/smart-track/cgm/settings/{cgmSettingId}",
+      "UpstreamHttpMethod": [
+        "Delete"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CGM/settings/{cgmSettingId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3009
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": [
+          "ApotheekLogistic"
+        ]
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    }
+    //-------------------------SMARTTRACK-END-------------------------
+  ]
+}

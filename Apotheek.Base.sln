@@ -1,0 +1,130 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apotheek.Base.Identity.Api", "src\Services\Identity\Api\Apotheek.Base.Identity.Api\Apotheek.Base.Identity.Api.csproj", "{2C96A134-A955-48FA-9487-AA2B3779828C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{8870C920-C957-46F2-8CF1-AF8324448F57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9CE3BEE5-DE5E-45B1-B006-562DB14A8D38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{687CDACE-4509-46C9-80CE-C3186D3BC6D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{AFFCCEBE-5467-44BA-9CBC-DA061B09E8DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A44E6699-CB22-46AB-B954-168927417770}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "identity", "identity", "{6B989C5E-41EB-4F15-B1D9-AE41418C9E21}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apotheek.Base.EntityFramework.Shared", "src\Services\identity\Data\Apotheek.Base.EntityFramework.Shared\Apotheek.Base.EntityFramework.Shared.csproj", "{FEE5709E-E271-43B1-B4A8-713CD6B07188}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apotheek.Base.EntityFramework.PostgreSQL", "src\Services\identity\Data\Apotheek.Base.EntityFramework.PostgreSQL\Apotheek.Base.EntityFramework.PostgreSQL.csproj", "{0B951199-A93E-4EF4-8EF1-A2D46480F718}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AuditLog", "AuditLog", "{7C858DF5-BE1E-412E-A68E-F0FCEC2B6D26}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apotheek.Base.AuditLogging", "src\Services\auditlog\Apotheek.Base.AuditLogging\Apotheek.Base.AuditLogging.csproj", "{5C7F15BB-72DF-402E-9DE5-6FDA642A3841}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apotheek.Base.AuditLogging.EntityFramework", "src\Services\auditlog\Apotheek.Base.AuditLogging.EntityFramework\Apotheek.Base.AuditLogging.EntityFramework.csproj", "{4FD52BEC-8F17-490A-AA87-A839DC120227}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apotheek.Base.EntityFramework", "src\Services\identity\Data\Apotheek.Base.EntityFramework\Apotheek.Base.EntityFramework.csproj", "{1BAC64FD-AD17-4177-A4C9-AAAFFDE0D4BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apotheek.Base.EntityFramework.Extensions", "src\Services\identity\Data\Apotheek.Base.EntityFramework.Extensions\Apotheek.Base.EntityFramework.Extensions.csproj", "{230A3DF1-2CBE-4009-91C8-67CE338FBF68}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apotheek.Base.EntityFramework.Identity", "src\Services\identity\Data\Apotheek.Base.EntityFramework.Identity\Apotheek.Base.EntityFramework.Identity.csproj", "{E7F6809F-1DA3-4200-A6C0-B131D0F27F63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateways", "ApiGateways", "{CD18248A-8BE2-46A0-A6AA-BB136D2DC174}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apotheek.Base.ApiGateway.Web", "src\ApiGateways\ApiGateway.Web\Apotheek.Base.ApiGateway.Web.csproj", "{13EC7FEE-36CD-465E-8963-4D93E3571604}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogic", "BusinessLogic", "{49CE8CE7-9D5C-43A4-A9E1-B2B5620FA3D4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apotheek.Base.BusinessLogic", "src\Services\identity\BusinessLogic\Apotheek.Base.BusinessLogic\Apotheek.Base.BusinessLogic.csproj", "{06507641-2A5A-41F2-B45F-CFC9DC1A7F78}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apotheek.Base.BusinessLogic.Identity", "src\Services\identity\BusinessLogic\Apotheek.Base.BusinessLogic.Identity\Apotheek.Base.BusinessLogic.Identity.csproj", "{F12B9F7C-A6C6-40FC-9343-B2F4E8BCC27F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apotheek.Base.BusinessLogic.Shared", "src\Services\identity\BusinessLogic\Apotheek.Base.BusinessLogic.Shared\Apotheek.Base.BusinessLogic.Shared.csproj", "{AB4CF9DB-E992-43D3-874E-4915D71CCB7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C96A134-A955-48FA-9487-AA2B3779828C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C96A134-A955-48FA-9487-AA2B3779828C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C96A134-A955-48FA-9487-AA2B3779828C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C96A134-A955-48FA-9487-AA2B3779828C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEE5709E-E271-43B1-B4A8-713CD6B07188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE5709E-E271-43B1-B4A8-713CD6B07188}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE5709E-E271-43B1-B4A8-713CD6B07188}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE5709E-E271-43B1-B4A8-713CD6B07188}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B951199-A93E-4EF4-8EF1-A2D46480F718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B951199-A93E-4EF4-8EF1-A2D46480F718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B951199-A93E-4EF4-8EF1-A2D46480F718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B951199-A93E-4EF4-8EF1-A2D46480F718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C7F15BB-72DF-402E-9DE5-6FDA642A3841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C7F15BB-72DF-402E-9DE5-6FDA642A3841}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C7F15BB-72DF-402E-9DE5-6FDA642A3841}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C7F15BB-72DF-402E-9DE5-6FDA642A3841}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FD52BEC-8F17-490A-AA87-A839DC120227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FD52BEC-8F17-490A-AA87-A839DC120227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FD52BEC-8F17-490A-AA87-A839DC120227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FD52BEC-8F17-490A-AA87-A839DC120227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BAC64FD-AD17-4177-A4C9-AAAFFDE0D4BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BAC64FD-AD17-4177-A4C9-AAAFFDE0D4BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BAC64FD-AD17-4177-A4C9-AAAFFDE0D4BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BAC64FD-AD17-4177-A4C9-AAAFFDE0D4BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{230A3DF1-2CBE-4009-91C8-67CE338FBF68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{230A3DF1-2CBE-4009-91C8-67CE338FBF68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{230A3DF1-2CBE-4009-91C8-67CE338FBF68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{230A3DF1-2CBE-4009-91C8-67CE338FBF68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7F6809F-1DA3-4200-A6C0-B131D0F27F63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7F6809F-1DA3-4200-A6C0-B131D0F27F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7F6809F-1DA3-4200-A6C0-B131D0F27F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7F6809F-1DA3-4200-A6C0-B131D0F27F63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13EC7FEE-36CD-465E-8963-4D93E3571604}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13EC7FEE-36CD-465E-8963-4D93E3571604}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13EC7FEE-36CD-465E-8963-4D93E3571604}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13EC7FEE-36CD-465E-8963-4D93E3571604}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06507641-2A5A-41F2-B45F-CFC9DC1A7F78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06507641-2A5A-41F2-B45F-CFC9DC1A7F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06507641-2A5A-41F2-B45F-CFC9DC1A7F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06507641-2A5A-41F2-B45F-CFC9DC1A7F78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F12B9F7C-A6C6-40FC-9343-B2F4E8BCC27F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F12B9F7C-A6C6-40FC-9343-B2F4E8BCC27F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F12B9F7C-A6C6-40FC-9343-B2F4E8BCC27F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F12B9F7C-A6C6-40FC-9343-B2F4E8BCC27F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB4CF9DB-E992-43D3-874E-4915D71CCB7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB4CF9DB-E992-43D3-874E-4915D71CCB7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB4CF9DB-E992-43D3-874E-4915D71CCB7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB4CF9DB-E992-43D3-874E-4915D71CCB7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2C96A134-A955-48FA-9487-AA2B3779828C} = {AFFCCEBE-5467-44BA-9CBC-DA061B09E8DE}
+		{687CDACE-4509-46C9-80CE-C3186D3BC6D1} = {6B989C5E-41EB-4F15-B1D9-AE41418C9E21}
+		{AFFCCEBE-5467-44BA-9CBC-DA061B09E8DE} = {6B989C5E-41EB-4F15-B1D9-AE41418C9E21}
+		{A44E6699-CB22-46AB-B954-168927417770} = {9CE3BEE5-DE5E-45B1-B006-562DB14A8D38}
+		{6B989C5E-41EB-4F15-B1D9-AE41418C9E21} = {A44E6699-CB22-46AB-B954-168927417770}
+		{FEE5709E-E271-43B1-B4A8-713CD6B07188} = {687CDACE-4509-46C9-80CE-C3186D3BC6D1}
+		{0B951199-A93E-4EF4-8EF1-A2D46480F718} = {687CDACE-4509-46C9-80CE-C3186D3BC6D1}
+		{7C858DF5-BE1E-412E-A68E-F0FCEC2B6D26} = {A44E6699-CB22-46AB-B954-168927417770}
+		{5C7F15BB-72DF-402E-9DE5-6FDA642A3841} = {7C858DF5-BE1E-412E-A68E-F0FCEC2B6D26}
+		{4FD52BEC-8F17-490A-AA87-A839DC120227} = {7C858DF5-BE1E-412E-A68E-F0FCEC2B6D26}
+		{1BAC64FD-AD17-4177-A4C9-AAAFFDE0D4BF} = {687CDACE-4509-46C9-80CE-C3186D3BC6D1}
+		{230A3DF1-2CBE-4009-91C8-67CE338FBF68} = {687CDACE-4509-46C9-80CE-C3186D3BC6D1}
+		{E7F6809F-1DA3-4200-A6C0-B131D0F27F63} = {687CDACE-4509-46C9-80CE-C3186D3BC6D1}
+		{CD18248A-8BE2-46A0-A6AA-BB136D2DC174} = {9CE3BEE5-DE5E-45B1-B006-562DB14A8D38}
+		{13EC7FEE-36CD-465E-8963-4D93E3571604} = {CD18248A-8BE2-46A0-A6AA-BB136D2DC174}
+		{49CE8CE7-9D5C-43A4-A9E1-B2B5620FA3D4} = {6B989C5E-41EB-4F15-B1D9-AE41418C9E21}
+		{06507641-2A5A-41F2-B45F-CFC9DC1A7F78} = {49CE8CE7-9D5C-43A4-A9E1-B2B5620FA3D4}
+		{F12B9F7C-A6C6-40FC-9343-B2F4E8BCC27F} = {49CE8CE7-9D5C-43A4-A9E1-B2B5620FA3D4}
+		{AB4CF9DB-E992-43D3-874E-4915D71CCB7D} = {49CE8CE7-9D5C-43A4-A9E1-B2B5620FA3D4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6480272A-8524-41EE-A430-DC23AFBDD0B4}
+	EndGlobalSection
+EndGlobal

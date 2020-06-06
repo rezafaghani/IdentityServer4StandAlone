@@ -1,0 +1,42 @@
+{
+  "ReRoutes": [
+    //-------------------------POSTALADDRESS-START-------------------
+    {
+      "UpstreamPathTemplate": "/api/v1/address/housenumber/postcode/{postCode}",
+      "DownstreamPathTemplate": "/api/PostalCode/houseNumber/postCode/{postCode}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3020
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/address/addressuids?{everything}",
+      "DownstreamPathTemplate": "/api/PostalCode/addressUids?{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3020
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    }
+    //-------------------------POSTALADDRESS-END---------------------
+  ]
+}

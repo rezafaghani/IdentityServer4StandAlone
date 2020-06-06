@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="IdentityServer4.EntityFramework.Storage" Version="3.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Apotheek.Base.EntityFramework.Extensions\Apotheek.Base.EntityFramework.Extensions.csproj" />
+    <ProjectReference Include="..\Apotheek.Base.EntityFramework.Shared\Apotheek.Base.EntityFramework.Shared.csproj" />
+    <ProjectReference Include="..\Apotheek.Base.EntityFramework\Apotheek.Base.EntityFramework.csproj" />
+   
+  </ItemGroup>
+
+</Project>

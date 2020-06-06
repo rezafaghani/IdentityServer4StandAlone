@@ -1,0 +1,31 @@
+﻿{
+  "Serilog": {
+    "Using": [ "Serilog.Sinks.Postgresql", "Serilog.Sinks.Graylog", "Serilog.Sinks.Console" ],
+    "MinimumLevel": "Information",
+    "WriteTo": [
+      {
+        "Name": "Console"
+      },
+      {
+        "Name": "PostgreSQL",
+        "Args": {
+          "connectionString": "Host=localhost;Database=ApotheekIdentity;Username=blue;Password=blue",
+          "tableName": "Logs",
+          "needAutoCreateTable": true,
+          "batchPostingLimit": 1
+        }
+      },
+      {
+        "Name": "Graylog",
+        "Args": {
+          "hostnameOrAddress": "http://aclgdev.bluebitsoft.com",
+          "port": "80",
+          "transportType": "Http"
+        }
+      }
+    ],
+    "Properties": {
+      "Application": "loggingIdentity"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "ReRoutes": [
+    {
+      "UpstreamPathTemplate": "/api/v1/bezorgt/shipping/{everything}",
+      "UpstreamHttpMethod": [
+        "Get","Post","Put","Delete"
+      ],
+      "DownstreamPathTemplate": "/api/v1/shipping/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3101
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Courier"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/bezorgt/{everything}",
+      "UpstreamHttpMethod": [
+        "Get","Post","Put","Delete"
+      ],
+      "DownstreamPathTemplate": "/api/v1/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3101
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Administrator, Planner"
+      }
+    }
+  ]
+}

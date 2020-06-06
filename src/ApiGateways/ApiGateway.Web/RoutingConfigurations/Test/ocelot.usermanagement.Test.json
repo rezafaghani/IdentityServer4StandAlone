@@ -1,0 +1,554 @@
+{
+  "ReRoutes": [
+    //-------------------------USERMANAGEMENT-START------------------
+    {
+      "DownstreamPathTemplate": "/api/v1/Auth/user/login",
+      "UpstreamPathTemplate": "/api/v1/Authentication/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Auth/user/logout",
+      "UpstreamPathTemplate": "/api/v1/Authentication/logout",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Auth/ValidatePassword",
+      "UpstreamPathTemplate": "/api/v1/Authentication/ValidatePassword",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Auth/loggedinUsers",
+      "UpstreamPathTemplate": "/api/v1/Authentication/loggedinUsers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Auth/switchUser",
+      "UpstreamPathTemplate": "/api/v1/Authentication/switchUser",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Auth/twoFA/uri",
+      "UpstreamPathTemplate": "/api/v1/Authentication/twoFA/uri",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Auth/twoFA/changeStatus",
+      "UpstreamPathTemplate": "/api/v1/Authentication/twoFA/changeStatus",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Auth/twoFA/verify",
+      "UpstreamPathTemplate": "/api/v1/Authentication/twoFA/verify",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/users/{userId}/role",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/v1/users/{userId}/role",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, Administrator, SystemAdministrator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/users/{userId}/changepassword",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/v1/users/{userId}/changepassword",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/users/{userId}/changestatus",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/v1/users/{userId}/changestatus",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/users/{userId}",
+      "UpstreamHttpMethod": [ "Get", "Put" ],
+      "DownstreamPathTemplate": "/api/v1/users/{userId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/users",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/v1/users",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/UitdeelPosts",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/v1/UitdeelPostManagement/GetListOfUitdeelPosts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/pharmacy/{pharmacyId}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamPathTemplate": "/api/v1/Pharmacies/{pharmacyId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Administrator, SystemAdministrator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/pharmacy/{pharmacyId}/Setting",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/v1/Pharmacies/{pharmacyId}/setting",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/pharmacy/{pharmacyId}/Setting",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamPathTemplate": "/api/v1/Pharmacies/{pharmacyId}/setting",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/pharmacy/proactivesetting",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/v1/ProActiveSetting",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/pharmacy/proactivesetting",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamPathTemplate": "/api/v1/ProActiveSetting",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/pharmacy/ProActiveDate",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/v1/ProActiveSetting/ProcessDate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/pharmacies/{pharmacyId}/users",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/v1/Pharmacies/{pharmacyId}/users",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/pharmacies/{pharmacyId}/users",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/v1/Pharmacies/{pharmacyId}/users",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, Administrator, SystemAdministrator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/roles",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/v1/role",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, Administrator, SystemAdministrator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/roles/{roleId}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamPathTemplate": "/api/v1/role/{roleId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, Administrator, SystemAdministrator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/pharmacies",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/v1/Pharmacies/AllPharmacies",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/pharmacy/logo?pharmacyId={pharmacyId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/v1/Pharmacies/logo?pharmacyId={pharmacyId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/pharmacy/logo?pharmacyId={pharmacyId}",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/v1/Pharmacies/logo?pharmacyId={pharmacyId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/CareRule/ZiNumbers",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/v1/CareRule/ZiNumbers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/careRule",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamPathTemplate": "/api/v1/CareRule",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/UserManagement/careRule/{careRuleId}",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "DownstreamPathTemplate": "/api/v1/CareRule/{careRuleId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiAuthKey",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "role": "Pharmacist, PharmacistAssistant, Administrator, SystemAdministrator, Collaborator"
+      }
+    }
+    //-------------------------USERMANAGEMENT-END--------------------
+  ]
+}
